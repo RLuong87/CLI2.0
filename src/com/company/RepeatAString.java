@@ -17,6 +17,6 @@ public class RepeatAString {
         for (int i = 0; i < num; i++) {
             repStr.append(str);
         }
-        System.out.println(repStr);
+        System.out.println("\n" + repStr + "\n");
     }
 }

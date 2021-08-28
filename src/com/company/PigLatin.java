@@ -30,8 +30,7 @@ public class PigLatin {
 
             pig.append(s).append(" ");
         }
-        System.out.println(str);
-        System.out.println(pig.toString().trim());
+        System.out.print("\nResult: " + pig.toString().trim() + "\n");
     }
 }
 

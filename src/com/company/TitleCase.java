@@ -21,6 +21,6 @@ public class TitleCase {
         for (String s : split) {
             str.append(s).append(" ");
         }
-        System.out.println("Result: " + str);
+        System.out.println("\nResult: " + str + "\n");
     }
 }

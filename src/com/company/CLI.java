@@ -66,10 +66,9 @@ public class CLI {
     public static char getChar(String question) {
 
         while (true) {
-            System.out.println(question);
-            System.out.print("Input: ");
+            System.out.print(question);
             scan.nextLine();
-            char userChar = scan.next().charAt(0);
+            char userChar = scan.next().toUpperCase().charAt(0);
 
             if (userChar != ' ') {
                 return userChar;
