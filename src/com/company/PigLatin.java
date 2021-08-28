@@ -3,7 +3,7 @@ package com.company;
 public class PigLatin {
     public static void run() {
 
-        String str = CLI.getStr("Enter any words you want");
+        String str = CLI.getStr("Enter any words you'd like");
         // Look at each word in the string
         String[] newStr = str.split(" ");
 

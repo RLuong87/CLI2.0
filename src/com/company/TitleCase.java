@@ -4,7 +4,7 @@ public class TitleCase {
 
     public static void run() {
 
-        String userStr = CLI.getStr("Enter any word you want");
+        String userStr = CLI.getStr("Enter any word you'd like");
 
         String[] split = userStr.split(" ");
 

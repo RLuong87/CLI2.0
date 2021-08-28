@@ -17,19 +17,20 @@ public class Menu {
         System.out.println("Please choose from one of our options");
         System.out.println("-------------------------------------");
         System.out.println("1. Factorial Calculator");
-        System.out.println("2. Title case a string");
+        System.out.println("2. Title case a word");
         System.out.println("3. Pig Latin Converter");
         System.out.println("4. Is it a factor?");
-        System.out.println("5. Exit the program");
+        System.out.println("5. Repeat a word");
+        System.out.println("6. Exit the program");
         System.out.println("-------------------------------------");
         System.out.print("Selection: ");
     }
 
     public static void options() {
 
-        while (option != 5) {
+        while (option != 6) {
             menu();
-            option = CLI.getInt(1, 5);
+            option = CLI.getInt(1, 6);
 
             switch (option) {
                 case 1:
@@ -40,7 +41,7 @@ public class Menu {
                     break;
                 case 2:
                     System.out.println("-------------------------------------");
-                    System.out.println("\n\tWelcome to\n\t\tThe Capitalizer\n");
+                    System.out.println("\n\tWelcome to\n\t\tThe Title case Program\n");
                     System.out.println("-------------------------------------");
                     TitleCase.run();
                     break;
@@ -57,6 +58,12 @@ public class Menu {
                     IsFactor.run();
                     break;
                 case 5:
+                    System.out.println("-------------------------------------");
+                    System.out.println("\n\tWelcome to the\n\t\tRepeat a word program\n");
+                    System.out.println("-------------------------------------");
+                    RepeatAString.run();
+                    break;
+                case 6:
                     System.out.println("\n");
                     System.out.println("*************************************");
                     System.out.println("\tThank you, come again!");
