@@ -1,5 +1,7 @@
 package com.company;
 
+import com.sun.source.tree.BreakTree;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -80,8 +82,24 @@ public class CLI {
     public static void exit() {
         System.out.println("\n*************************************\n");
         System.out.println("\tThank you, come again!");
-        System.exit(6);
+        System.exit(0);
         scan.close();
+    }
+
+    public static int getInt(String question) {
+
+        while (true) {
+            try {
+                System.out.println(question);
+                int userInput = scan.nextInt();
+
+            } catch (InputMismatchException exception) {
+                System.out.println("You must enter a number");
+                scan.nextLine();
+                break;
+            }
+        }
+        return 0;
     }
 }
 

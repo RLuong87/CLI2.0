@@ -24,14 +24,14 @@ public class PigLatin {
                 newStr[i] = newStr[i].substring(1) + newStr[i].charAt(0) + "ay";
             }
         }
-        String pig = "";
+        StringBuilder pig = new StringBuilder();
 
-        for (int i = 0; i < newStr.length; i++) {
+        for (String s : newStr) {
 
-            pig += newStr[i] + " ";
+            pig.append(s).append(" ");
         }
         System.out.println(str);
-        System.out.println(pig.trim());
+        System.out.println(pig.toString().trim());
     }
 }
 

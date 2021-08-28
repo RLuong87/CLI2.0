@@ -18,7 +18,7 @@ public class Menu {
         System.out.println("3. Pig Latin Converter");
         System.out.println("4. Is it a factor?");
         System.out.println("5. Repeat a word");
-        System.out.println("6. Calculator");
+        System.out.println("6. Basic Calculator");
         System.out.println("7. Exit the program");
         System.out.println("-------------------------------------");
         System.out.print("Selection: ");

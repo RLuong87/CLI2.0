@@ -15,7 +15,7 @@ public class Factorial {
         for (int i = 1; i <= num; i++) {
             factor *= i;
         }
-        System.out.print("Result: " + factor);
+        System.out.println("Result: " + factor);
     }
 }
 

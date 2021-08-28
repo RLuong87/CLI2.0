@@ -1,6 +1,7 @@
 package com.company;
 
 public class BasicCalculator {
+    private static int calculate = 0;
 
     public static void run() {
 
@@ -11,7 +12,6 @@ public class BasicCalculator {
         int num1 = CLI.getInt("Enter a number", 0, 1_000_000_000);
         char operator = CLI.getChar("Enter an operator");
         int num2 = CLI.getInt("Enter a number", 0, 1_000_000_000);
-        int calculate = 0;
 
         switch (operator) {
             case '+' -> calculate = num1 + num2;
