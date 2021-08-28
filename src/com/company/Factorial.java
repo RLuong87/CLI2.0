@@ -4,6 +4,10 @@ public class Factorial {
 
     public static void run() {
 
+        System.out.println("-------------------------------------");
+        System.out.println("\n\tWelcome to the\n\t\tFactorial Calculator\n");
+        System.out.println("-------------------------------------");
+
         int num = CLI.getInt("Enter a number between 1 and 16", 1, 16);
 
         int factor = 1;

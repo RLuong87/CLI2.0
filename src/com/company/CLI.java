@@ -61,5 +61,13 @@ public class CLI {
             }
         }
     }
+
+    public static void exit() {
+        System.out.println("\n");
+        System.out.println("*************************************");
+        System.out.println("\tThank you, come again!");
+        System.exit(6);
+        scan.close();
+    }
 }
 

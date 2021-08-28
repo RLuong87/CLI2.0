@@ -4,6 +4,10 @@ public class RepeatAString {
 
     public static void run() {
 
+        System.out.println("-------------------------------------");
+        System.out.println("\n\tWelcome to the\n\t\tRepeat a word program\n");
+        System.out.println("-------------------------------------");
+
         String str = CLI.getStr("Enter a word to repeat");
 
         int num = CLI.getInt("Enter a number", 1, 100);

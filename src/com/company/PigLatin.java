@@ -3,6 +3,10 @@ package com.company;
 public class PigLatin {
     public static void run() {
 
+        System.out.println("-------------------------------------");
+        System.out.println("\n\tWelcome to the\n\t\tPig Latin Converter\n");
+        System.out.println("-------------------------------------");
+
         String str = CLI.getStr("Enter any words you'd like");
         // Look at each word in the string
         String[] newStr = str.split(" ");

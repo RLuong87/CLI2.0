@@ -9,7 +9,7 @@ public class Menu {
         options();
     }
 
-    public static void menu() {
+    public static void displayMenu() {
         System.out.println();
         System.out.println("-------------------------------------");
         System.out.println("Please choose from one of our options");
@@ -26,47 +26,16 @@ public class Menu {
 
     public static void options() {
         while (true) {
-            menu();
+            displayMenu();
             int option = CLI.getInt(1, 6);
 
             switch (option) {
-                case 1 -> {
-                    System.out.println("-------------------------------------");
-                    System.out.println("\n\tWelcome to the\n\t\tFactorial Calculator\n");
-                    System.out.println("-------------------------------------");
-                    Factorial.run();
-                }
-                case 2 -> {
-                    System.out.println("-------------------------------------");
-                    System.out.println("\n\tWelcome to\n\t\tThe Title Case Program\n");
-                    System.out.println("-------------------------------------");
-                    TitleCase.run();
-                }
-                case 3 -> {
-                    System.out.println("-------------------------------------");
-                    System.out.println("\n\tWelcome to the\n\t\tPig Latin Converter\n");
-                    System.out.println("-------------------------------------");
-                    PigLatin.run();
-                }
-                case 4 -> {
-                    System.out.println("-------------------------------------");
-                    System.out.println("\n\tWelcome to the\n\t\tIs it a Factor?\n");
-                    System.out.println("-------------------------------------");
-                    IsFactor.run();
-                }
-                case 5 -> {
-                    System.out.println("-------------------------------------");
-                    System.out.println("\n\tWelcome to the\n\t\tRepeat a word program\n");
-                    System.out.println("-------------------------------------");
-                    RepeatAString.run();
-                }
-                case 6 -> {
-                    System.out.println("\n");
-                    System.out.println("*************************************");
-                    System.out.println("\tThank you, come again!");
-                    System.exit(6);
-                    CLI.scan.close();
-                }
+                case 1 -> Factorial.run();
+                case 2 -> TitleCase.run();
+                case 3 -> PigLatin.run();
+                case 4 -> IsFactor.run();
+                case 5 -> RepeatAString.run();
+                case 6 -> CLI.exit();
             }
         }
     }
