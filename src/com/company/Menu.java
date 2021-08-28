@@ -2,8 +2,6 @@ package com.company;
 
 public class Menu {
 
-    static int option;
-
     public static void start() {
         System.out.println("#####################################");
         System.out.println("| Welcome to Richie's Algorithm CLI |");
@@ -27,10 +25,9 @@ public class Menu {
     }
 
     public static void options() {
-
-        while (option != 6) {
+        while (true) {
             menu();
-            option = CLI.getInt(1, 6);
+            int option = CLI.getInt(1, 6);
 
             switch (option) {
                 case 1 -> {
@@ -67,6 +64,7 @@ public class Menu {
                     System.out.println("\n");
                     System.out.println("*************************************");
                     System.out.println("\tThank you, come again!");
+                    System.exit(6);
                     CLI.scan.close();
                 }
             }
