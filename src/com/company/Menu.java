@@ -33,42 +33,42 @@ public class Menu {
             option = CLI.getInt(1, 6);
 
             switch (option) {
-                case 1:
+                case 1 -> {
                     System.out.println("-------------------------------------");
                     System.out.println("\n\tWelcome to the\n\t\tFactorial Calculator\n");
                     System.out.println("-------------------------------------");
                     Factorial.run();
-                    break;
-                case 2:
+                }
+                case 2 -> {
                     System.out.println("-------------------------------------");
-                    System.out.println("\n\tWelcome to\n\t\tThe Title case Program\n");
+                    System.out.println("\n\tWelcome to\n\t\tThe Title Case Program\n");
                     System.out.println("-------------------------------------");
                     TitleCase.run();
-                    break;
-                case 3:
+                }
+                case 3 -> {
                     System.out.println("-------------------------------------");
                     System.out.println("\n\tWelcome to the\n\t\tPig Latin Converter\n");
                     System.out.println("-------------------------------------");
                     PigLatin.run();
-                    break;
-                case 4:
+                }
+                case 4 -> {
                     System.out.println("-------------------------------------");
                     System.out.println("\n\tWelcome to the\n\t\tIs it a Factor?\n");
                     System.out.println("-------------------------------------");
                     IsFactor.run();
-                    break;
-                case 5:
+                }
+                case 5 -> {
                     System.out.println("-------------------------------------");
                     System.out.println("\n\tWelcome to the\n\t\tRepeat a word program\n");
                     System.out.println("-------------------------------------");
                     RepeatAString.run();
-                    break;
-                case 6:
+                }
+                case 6 -> {
                     System.out.println("\n");
                     System.out.println("*************************************");
                     System.out.println("\tThank you, come again!");
                     CLI.scan.close();
-                    break;
+                }
             }
         }
     }

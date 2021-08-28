@@ -10,7 +10,7 @@ public class RepeatAString {
 
         StringBuilder repStr = new StringBuilder();
 
-        for (int i = 0; i <= num; i++) {
+        for (int i = 0; i < num; i++) {
             repStr.append(str);
         }
         System.out.println(repStr);
