@@ -21,7 +21,7 @@ public class Main {
 //        s = s.replaceAll("\\D+","");
 //        int num1 = Integer.parseInt(s);
 //        System.out.println(num1 + 2);
-
+//        System.out.println(BasicCalculator.run(8, '/', 4));
 
     }
 }

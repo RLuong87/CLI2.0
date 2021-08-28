@@ -5,7 +5,7 @@ public class TitleCase {
     public static void run() {
 
         System.out.println("-------------------------------------");
-        System.out.println("\n\tWelcome to\n\t\tThe Title Case Program\n");
+        System.out.println("\n\tWelcome to the\n\t\tTitle Case Program\n");
         System.out.println("-------------------------------------");
 
         String userStr = CLI.getStr("Enter any word you'd like");

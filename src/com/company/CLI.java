@@ -1,6 +1,5 @@
 package com.company;
 
-import java.sql.SQLOutput;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -62,9 +61,24 @@ public class CLI {
         }
     }
 
+    public static char getChar(String question) {
+
+        while (true) {
+            System.out.println(question);
+            System.out.print("Input: ");
+            scan.nextLine();
+            char userChar = scan.next().charAt(0);
+
+            if (userChar != ' ') {
+                return userChar;
+            } else {
+                System.out.println("Enter an operator!");
+            }
+        }
+    }
+
     public static void exit() {
-        System.out.println("\n");
-        System.out.println("*************************************");
+        System.out.println("\n*************************************\n");
         System.out.println("\tThank you, come again!");
         System.exit(6);
         scan.close();

@@ -10,7 +10,6 @@ public class Menu {
     }
 
     public static void displayMenu() {
-        System.out.println();
         System.out.println("-------------------------------------");
         System.out.println("Please choose from one of our options");
         System.out.println("-------------------------------------");
@@ -19,7 +18,8 @@ public class Menu {
         System.out.println("3. Pig Latin Converter");
         System.out.println("4. Is it a factor?");
         System.out.println("5. Repeat a word");
-        System.out.println("6. Exit the program");
+        System.out.println("6. Calculator");
+        System.out.println("7. Exit the program");
         System.out.println("-------------------------------------");
         System.out.print("Selection: ");
     }
@@ -27,15 +27,16 @@ public class Menu {
     public static void options() {
         while (true) {
             displayMenu();
-            int option = CLI.getInt(1, 6);
-
+            int option = CLI.getInt(1, 7);
+            // Switch Expression, much more concise
             switch (option) {
                 case 1 -> Factorial.run();
                 case 2 -> TitleCase.run();
                 case 3 -> PigLatin.run();
                 case 4 -> IsFactor.run();
                 case 5 -> RepeatAString.run();
-                case 6 -> CLI.exit();
+                case 6 -> BasicCalculator.run();
+                case 7 -> CLI.exit();
             }
         }
     }
