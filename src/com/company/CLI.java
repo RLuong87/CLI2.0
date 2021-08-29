@@ -1,7 +1,5 @@
 package com.company;
 
-import com.sun.source.tree.BreakTree;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -23,7 +21,7 @@ public class CLI {
                     return userInt;
                 }
             } catch (InputMismatchException exception) {
-                System.out.println("\nInvalid, you must enter a value between " + min + " & " + max + "\n");
+                System.out.println("\nInvalid, you must enter a number between " + min + " & " + max + "\n");
                 scan.nextLine();
             }
         }
@@ -89,16 +87,14 @@ public class CLI {
 
         while (true) {
             try {
-                System.out.println(question);
-                int userInput = scan.nextInt();
+                System.out.print(question);
+                return scan.nextInt();
 
             } catch (InputMismatchException exception) {
-                System.out.println("You must enter a number");
+                System.out.println("Sorry, you must enter a number");
                 scan.nextLine();
-                break;
             }
         }
-        return 0;
     }
 }
 

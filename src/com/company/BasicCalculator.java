@@ -9,9 +9,9 @@ public class BasicCalculator {
         System.out.println("\n\tWelcome to the\n\t\tBasic Calculator\n");
         System.out.println("-------------------------------------");
 
-        int num1 = CLI.getInt("\nEnter a number: ", 0, 1_000_000_000);
+        int num1 = CLI.getInt("\nEnter a number: ");
         char operator = CLI.getChar("\nEnter an operator: ");
-        int num2 = CLI.getInt("\nEnter a number: ", 0, 1_000_000_000);
+        int num2 = CLI.getInt("\nEnter a number: ");
 
         switch (operator) {
             case '+' -> calculate = num1 + num2;

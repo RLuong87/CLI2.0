@@ -7,9 +7,7 @@ public class TitleCase {
         System.out.println("-------------------------------------");
         System.out.println("\n\tWelcome to the\n\t\tTitle Case Program\n");
         System.out.println("-------------------------------------");
-
         String userStr = CLI.getStr("Enter any word you'd like");
-
         String[] split = userStr.split(" ");
 
         for (int i = 0; i < split.length; i++) {
