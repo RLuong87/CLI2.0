@@ -22,7 +22,8 @@ public class Menu {
         System.out.println("5. Repeat a word");
         System.out.println("6. Basic Calculator");
         System.out.println("7. Leap Year Checker");
-        System.out.println("8. Exit");
+        System.out.println("8. Coin Toss");
+        System.out.println("9. Exit");
         System.out.println("-------------------------------------");
         System.out.print("Selection: ");
     }
@@ -31,7 +32,7 @@ public class Menu {
 
         while (true) {
             displayMenu();
-            int option = CLI.getInt(1, 8);
+            int option = CLI.getInt(1, 9);
             // Switch Expression, much more concise
             switch (option) {
                 case 1 -> Factorial.run();
@@ -41,7 +42,8 @@ public class Menu {
                 case 5 -> RepeatAString.run();
                 case 6 -> BasicCalculator.run();
                 case 7 -> LeapYearChecker.run();
-                case 8 -> CLI.exit();
+                case 8 -> CoinToss.run();
+                case 9 -> CLI.exit();
             }
         }
     }
@@ -77,6 +79,18 @@ public class Menu {
 
             switch (yes) {
                 case 'Y' -> IsFactor.run();
+                case 'N' -> options();
+            }
+        }
+    }
+
+    public static void subOptions4() {
+        while (true) {
+            System.out.println("Wanna play again?");
+            yes = CLI.getChar("(" + "Y/N" + "): ");
+
+            switch (yes) {
+                case 'Y' -> CoinToss.run();
                 case 'N' -> options();
             }
         }
