@@ -19,7 +19,7 @@ public class FahrenheitCelsiusConverter {
 //        return a * 9 / 5 + 32;
 
         int celsius = CLI.getInt("\nEnter Celsius degrees to convert to Fahrenheit: ");
-        System.out.println(celsius * 9 / 5 + 32);
+        System.out.println("Fahrenheit: " + (celsius * 9 / 5 + 32));
         Menu.subOptions5();
     }
 
@@ -27,8 +27,8 @@ public class FahrenheitCelsiusConverter {
 
 //        return (b - 32) * 5 / 9;
 
-        int fahrenheit = CLI.getInt("\nEnter Fahrenheit to convert to Celsius: ");
-        System.out.println((fahrenheit - 32) * 5 / 9);
+        int fahrenheit = CLI.getInt("\nEnter Fahrenheit: ");
+        System.out.println("Celsius: " + (fahrenheit - 32) * 5 / 9);
         Menu.subOptions6();
     }
 }
