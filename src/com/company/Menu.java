@@ -23,7 +23,8 @@ public class Menu {
         System.out.println("6. Basic Calculator");
         System.out.println("7. Leap Year Checker");
         System.out.println("8. Coin Toss");
-        System.out.println("9. Exit");
+        System.out.println("9. Fahrenheit/Celsius Converter");
+        System.out.println("10. Exit");
         System.out.println("-------------------------------------");
         System.out.print("Selection: ");
     }
@@ -32,7 +33,7 @@ public class Menu {
 
         while (true) {
             displayMenu();
-            int option = CLI.getInt(1, 9);
+            int option = CLI.getInt(1, 10);
             // Switch Expression, much more concise
             switch (option) {
                 case 1 -> Factorial.run();
@@ -43,7 +44,8 @@ public class Menu {
                 case 6 -> BasicCalculator.run();
                 case 7 -> LeapYearChecker.run();
                 case 8 -> CoinToss.run();
-                case 9 -> CLI.exit();
+                case 9 -> FahrenheitCelsiusConverter.run();
+                case 10 -> CLI.exit();
             }
         }
     }
@@ -91,6 +93,30 @@ public class Menu {
 
             switch (yes) {
                 case 'Y' -> CoinToss.run();
+                case 'N' -> options();
+            }
+        }
+    }
+
+    public static void subOptions5() {
+        while (true) {
+            System.out.println("\nWould you like to use this again?");
+            yes = CLI.getChar("(" + "Y/N" + "): ");
+
+            switch (yes) {
+                case 'Y' -> FahrenheitCelsiusConverter.convertCelsiusToF();
+                case 'N' -> options();
+            }
+        }
+    }
+
+    public static void subOptions6() {
+        while (true) {
+            System.out.println("\nWould you like to use this again?");
+            yes = CLI.getChar("(" + "Y/N" + "): ");
+
+            switch (yes) {
+                case 'Y' -> FahrenheitCelsiusConverter.convertFahrenheitToC();
                 case 'N' -> options();
             }
         }
