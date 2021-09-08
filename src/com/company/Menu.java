@@ -13,7 +13,7 @@ public class Menu {
     public static void displayMenu() {
         System.out.println("\n-------------------------------------");
         System.out.println("============= M E N U ===============");
-        System.out.println("\tChoose from one of our options");
+        System.out.println("\tSelect from one of our options");
         System.out.println("-------------------------------------");
         System.out.println("1. Factorial Calculator");
         System.out.println("2. Title case a word");

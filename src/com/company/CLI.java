@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class CLI {
 
-    public static Scanner scan = new Scanner(System.in);
+    private static final Scanner scan = new Scanner(System.in);
 
     public static int getInt(String question, int min, int max) {
 
