@@ -31,11 +31,9 @@ public class Menu {
     }
 
     public static void options() {
-
         while (true) {
             displayMenu();
             int option = CLI.getInt(1, 11);
-            // Switch Expression, much more concise
             switch (option) {
                 case 1 -> Factorial.run();
                 case 2 -> TitleCase.run();
@@ -56,7 +54,6 @@ public class Menu {
         while (true) {
             System.out.println("\nWould you like to try again?");
             choice = CLI.getChar("(" + "Y/N" + "): ");
-
             switch (choice) {
                 case 'Y' -> Factorial.run();
                 case 'N' -> options();
@@ -68,7 +65,6 @@ public class Menu {
         while (true) {
             System.out.println("\nWould you like to try again?");
             choice = CLI.getChar("(" + "Y/N" + "): ");
-
             switch (choice) {
                 case 'Y' -> LeapYearChecker.run();
                 case 'N' -> options();
@@ -80,7 +76,6 @@ public class Menu {
         while (true) {
             System.out.println("\nWould you like to try again?");
             choice = CLI.getChar("(" + "Y/N" + "): ");
-
             switch (choice) {
                 case 'Y' -> IsFactor.run();
                 case 'N' -> options();
@@ -92,7 +87,6 @@ public class Menu {
         while (true) {
             System.out.println("Wanna play again?");
             choice = CLI.getChar("(" + "Y/N" + "): ");
-
             switch (choice) {
                 case 'Y' -> CoinToss.run();
                 case 'N' -> options();
