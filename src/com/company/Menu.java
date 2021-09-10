@@ -24,7 +24,8 @@ public class Menu {
         System.out.println("7. Leap Year Checker");
         System.out.println("8. Coin Toss");
         System.out.println("9. Fahrenheit/Celsius Converter");
-        System.out.println("10. Exit");
+        System.out.println("10. Atbash Generator");
+        System.out.println("11. Exit");
         System.out.println("-------------------------------------");
         System.out.print("Selection: ");
     }
@@ -33,7 +34,7 @@ public class Menu {
 
         while (true) {
             displayMenu();
-            int option = CLI.getInt(1, 10);
+            int option = CLI.getInt(1, 11);
             // Switch Expression, much more concise
             switch (option) {
                 case 1 -> Factorial.run();
@@ -45,7 +46,8 @@ public class Menu {
                 case 7 -> LeapYearChecker.run();
                 case 8 -> CoinToss.run();
                 case 9 -> FahrenheitCelsiusConverter.run();
-                case 10 -> CLI.exit();
+                case 10 -> AtBash.run();
+                case 11 -> CLI.exit();
             }
         }
     }
