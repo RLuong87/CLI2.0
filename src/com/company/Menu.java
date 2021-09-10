@@ -1,7 +1,7 @@
 package com.company;
 
 public class Menu {
-    private static char yes = ' ';
+    private static char choice = ' ';
 
     public static void start() {
         System.out.println("#####################################");
@@ -55,9 +55,9 @@ public class Menu {
     public static void subOptions() {
         while (true) {
             System.out.println("\nWould you like to try again?");
-            yes = CLI.getChar("(" + "Y/N" + "): ");
+            choice = CLI.getChar("(" + "Y/N" + "): ");
 
-            switch (yes) {
+            switch (choice) {
                 case 'Y' -> Factorial.run();
                 case 'N' -> options();
             }
@@ -67,9 +67,9 @@ public class Menu {
     public static void subOptions2() {
         while (true) {
             System.out.println("\nWould you like to try again?");
-            yes = CLI.getChar("(" + "Y/N" + "): ");
+            choice = CLI.getChar("(" + "Y/N" + "): ");
 
-            switch (yes) {
+            switch (choice) {
                 case 'Y' -> LeapYearChecker.run();
                 case 'N' -> options();
             }
@@ -79,9 +79,9 @@ public class Menu {
     public static void subOptions3() {
         while (true) {
             System.out.println("\nWould you like to try again?");
-            yes = CLI.getChar("(" + "Y/N" + "): ");
+            choice = CLI.getChar("(" + "Y/N" + "): ");
 
-            switch (yes) {
+            switch (choice) {
                 case 'Y' -> IsFactor.run();
                 case 'N' -> options();
             }
@@ -91,9 +91,9 @@ public class Menu {
     public static void subOptions4() {
         while (true) {
             System.out.println("Wanna play again?");
-            yes = CLI.getChar("(" + "Y/N" + "): ");
+            choice = CLI.getChar("(" + "Y/N" + "): ");
 
-            switch (yes) {
+            switch (choice) {
                 case 'Y' -> CoinToss.run();
                 case 'N' -> options();
             }
@@ -102,24 +102,19 @@ public class Menu {
 
     public static void subOptions5() {
         while (true) {
-            System.out.println("\nWould you like to use this again?");
-            yes = CLI.getChar("(" + "Y/N" + "): ");
-
-            switch (yes) {
-                case 'Y' -> FahrenheitCelsiusConverter.convertCelsiusToF();
-                case 'N' -> options();
-            }
-        }
-    }
-
-    public static void subOptions6() {
-        while (true) {
-            System.out.println("\nWould you like to use this again?");
-            yes = CLI.getChar("(" + "Y/N" + "): ");
-
-            switch (yes) {
-                case 'Y' -> FahrenheitCelsiusConverter.convertFahrenheitToC();
-                case 'N' -> options();
+            System.out.println();
+            choice = CLI.getChar("""
+                    Choose from these options below
+                    --------------------------------
+                    F) Convert Fahrenheit to Celsius
+                    C) Convert Celsius to Fahrenheit
+                    E) Main Menu
+                    --------------------------------
+                    Selection:\s""");
+            switch (choice) {
+                case 'F' -> FahrenheitCelsiusConverter.convertFahrenheitToC();
+                case 'C' -> FahrenheitCelsiusConverter.convertCelsiusToF();
+                case 'E' -> options();
             }
         }
     }
