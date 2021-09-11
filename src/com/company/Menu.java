@@ -93,24 +93,5 @@ public class Menu {
             }
         }
     }
-
-    public static void subOptions5() {
-        while (true) {
-            System.out.println();
-            choice = CLI.getChar("""
-                    Choose from these options below
-                    --------------------------------
-                    F) Convert Fahrenheit to Celsius
-                    C) Convert Celsius to Fahrenheit
-                    E) Main Menu
-                    --------------------------------
-                    Selection:\s""");
-            switch (choice) {
-                case 'F' -> FahrenheitCelsiusConverter.convertFahrenheitToC();
-                case 'C' -> FahrenheitCelsiusConverter.convertCelsiusToF();
-                case 'E' -> options();
-            }
-        }
-    }
 }
 

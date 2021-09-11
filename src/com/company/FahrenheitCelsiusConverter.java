@@ -3,20 +3,21 @@ package com.company;
 public class FahrenheitCelsiusConverter {
 
     public static void run() {
+
         while (true) {
             System.out.println();
-            char choice = CLI.getChar("""
-                    Choose from these options below
+            int choice = CLI.getInt("""
+                    Choose from the options below
                     --------------------------------
-                    F) Convert Fahrenheit to Celsius
-                    C) Convert Celsius to Fahrenheit
-                    E) Main Menu
+                    1) Convert Fahrenheit to Celsius
+                    2) Convert Celsius to Fahrenheit
+                    3) Main Menu
                     --------------------------------
                     Selection:\s""");
             switch (choice) {
-                case 'F' -> convertFahrenheitToC();
-                case 'C' -> convertCelsiusToF();
-                case 'E' -> Menu.options();
+                case 1 -> convertFahrenheitToC();
+                case 2 -> convertCelsiusToF();
+                case 3 -> Menu.options();
                 default -> System.out.println("\nERROR: INVALID SELECTION, PLEASE TRY AGAIN.");
             }
         }
@@ -25,12 +26,12 @@ public class FahrenheitCelsiusConverter {
     public static void convertFahrenheitToC() {
         int fahrenheit = CLI.getInt("\nEnter a Fahrenheit temperature and we'll convert it to Celsius\nInput: ");
         System.out.println("\nCelsius: " + (fahrenheit - 32) * 5 / 9);
-        Menu.subOptions5();
+        run();
     }
 
     public static void convertCelsiusToF() {
         int celsius = CLI.getInt("\nEnter a Celsius temperature and we'll convert it to Fahrenheit\nInput: ");
         System.out.println("\nFahrenheit: " + (celsius * 9 / 5 + 32));
-        Menu.subOptions5();
+        run();
     }
 }
