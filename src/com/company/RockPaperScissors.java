@@ -4,15 +4,13 @@ import java.util.Random;
 
 public class RockPaperScissors {
 
-    public static String rps(String s1, String s2) {
+    public static String rps(String player1, String player2) {
 
-        String rock = new String("rock");
-        String paper = new String("paper");
-        String scissors = new String("scissors");
+        String rock = "rock", paper = "paper", scissors = "scissors";
 
-        if (s1.equals(paper) && s2.equals(rock) || s1.equals(rock) && s2.equals(scissors) || s1.equals(scissors) && s2.equals(paper)) {
+        if (player1.equals(paper) && player2.equals(rock) || player1.equals(rock) && player2.equals(scissors) || player1.equals(scissors) && player2.equals(paper)) {
             return "Player 1 wins";
-        } else if (s2.equals(paper) && s1.equals(rock) || s2.equals(rock) && s1.equals(scissors) || s2.equals(scissors) && s1.equals(paper)) {
+        } else if (player1.equals(rock) && player2.equals(paper) || player1.equals(scissors) && player2.equals(rock) || player1.equals(paper) && player2.equals(scissors)) {
             return "Player 2 wins";
         } else {
             return "TIE";
