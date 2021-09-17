@@ -96,5 +96,9 @@ public class CLI {
             }
         }
     }
+
+    public static void pressEnter() {
+        scan.nextLine();
+    }
 }
 

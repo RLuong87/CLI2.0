@@ -1,7 +1,5 @@
 package com.company;
 
-import java.util.Random;
-
 public class RockPaperScissors {
 
     public static String rps(String player1, String player2) {
