@@ -34,12 +34,12 @@ public class CLI {
                 int userInt = scan.nextInt();
 
                 if (userInt < min || userInt > max) {
-                    System.out.println("\nInvalid selection! A number between " + min + " & " + max + "\n");
+                    System.out.println("\nInvalid selection! Enter a number between " + min + " & " + max + "\n");
                 } else {
                     return userInt;
                 }
             } catch (InputMismatchException exception) {
-                System.out.println("\nInvalid selection! A number between " + min + " & " + max + "\n");
+                System.out.println("\nInvalid selection! Enter a number between " + min + " & " + max + "\n");
                 scan.nextLine();
             }
         }

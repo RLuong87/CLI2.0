@@ -6,7 +6,7 @@ public class AtBash {
 
     public static void run() {
 
-        String message = CLI.getStr("Enter a message: ");
+        String message = CLI.getStr("\nEnter a message: ");
         String[] messArr = message.toUpperCase().split("");
 
         for (String s : messArr) {

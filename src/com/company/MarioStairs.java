@@ -4,7 +4,7 @@ public class MarioStairs {
 
     public static void run() {
 
-//      Simple Pyramid
+        System.out.println("\n\tM A R I O  S T A I R S\n");
 
         int pSize = 10;
 

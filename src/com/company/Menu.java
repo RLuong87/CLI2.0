@@ -29,7 +29,8 @@ public class Menu {
                 8. Coin Toss
                 9. Fahrenheit/Celsius Converter
                 10. Atbash Generator
-                11. Exit
+                11. Dice Roller
+                12. Exit
                 -------------------------------------
                 Selection:\s""");
     }
@@ -50,7 +51,8 @@ public class Menu {
                 case 8 -> CoinToss.run();
                 case 9 -> FahrenheitCelsiusConverter.run();
                 case 10 -> AtBash.run();
-                case 11 -> CLI.exit();
+                case 11 -> DiceRoller.run();
+                case 12 -> CLI.exit();
             }
         }
     }

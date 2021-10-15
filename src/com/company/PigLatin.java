@@ -1,6 +1,7 @@
 package com.company;
 
 public class PigLatin {
+
     public static void run() {
 
         System.out.println("-------------------------------------");
@@ -10,11 +11,10 @@ public class PigLatin {
         String str = CLI.getStr("Enter any words you'd like");
         // Look at each word in the string
         String[] newStr = str.split(" ");
-
+        // If it's a vowel add "way" to the end
+        // Otherwise add "ay"
+        // Combine all new words into a string
         for (int i = 0; i < newStr.length; i++) {
-            // If it's a vowel add "way" to the end
-            // Otherwise add "ay"
-            // Combine all new words into a string
             char chars = newStr[i].charAt(0); // Look at the first characters of each string in the array
 
             if (chars == 'A' || chars == 'E' || chars == 'I' || chars == 'O' || chars == 'U' || chars == 'a'
