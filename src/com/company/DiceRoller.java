@@ -13,7 +13,8 @@ public class DiceRoller {
         System.out.print("You rolled a ");
         for (int i = 0; i < getRoll; i++) {
             int roll = r.nextInt(6) + 1;
-            System.out.print(roll + " " + "\n");
+            System.out.print(roll + " ");
         }
+        System.out.println("\n");
     }
 }

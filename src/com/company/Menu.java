@@ -30,7 +30,8 @@ public class Menu {
                 9. Fahrenheit/Celsius Converter
                 10. Atbash Generator
                 11. Dice Roller
-                12. Exit
+                12. Encryption
+                13. Exit
                 -------------------------------------
                 Selection:\s""");
     }
@@ -38,7 +39,7 @@ public class Menu {
     public static void options() {
         while (true) {
             displayMenu();
-            int option = CLI.getInt(0, 11);
+            int option = CLI.getInt(0, 13);
             switch (option) {
                 case 0 -> MarioStairs.run();
                 case 1 -> Factorial.run();
@@ -52,7 +53,8 @@ public class Menu {
                 case 9 -> FahrenheitCelsiusConverter.run();
                 case 10 -> AtBash.run();
                 case 11 -> DiceRoller.run();
-                case 12 -> CLI.exit();
+                case 12 -> Encryption.run();
+                case 13 -> CLI.exit();
             }
         }
     }
