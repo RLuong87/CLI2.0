@@ -31,7 +31,8 @@ public class Menu {
                 10. Atbash Generator
                 11. Dice Roller
                 12. Encryption
-                13. Exit
+                13. Vowel Finder
+                14. Exit
                 -------------------------------------
                 Selection:\s""");
     }
@@ -39,7 +40,7 @@ public class Menu {
     public static void options() {
         while (true) {
             displayMenu();
-            int option = CLI.getInt(0, 13);
+            int option = CLI.getInt(0, 14);
             switch (option) {
                 case 0 -> MarioStairs.run();
                 case 1 -> Factorial.run();
@@ -54,7 +55,8 @@ public class Menu {
                 case 10 -> AtBash.run();
                 case 11 -> DiceRoller.run();
                 case 12 -> Encryption.run();
-                case 13 -> CLI.exit();
+                case 13 -> VowelFinder.run();
+                case 14 -> CLI.exit();
             }
         }
     }
