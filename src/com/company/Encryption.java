@@ -17,6 +17,7 @@ public class Encryption {
         for (char aChar : chars) { // For each loop through the new char array
             str.append(aChar); // append the results with String builder
         }
-        System.out.println(str.toString()); // Return the new string and using the to string method from the String builder class
+        System.out.println("\nYour input: " + word);
+        System.out.println("Result: " + str); // Return the new string and using the to string method from the String builder class
     }
 }

@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class CLI {
 
-    private static final Scanner scan = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static int getInt(String question, int min, int max) {
 
@@ -13,7 +13,7 @@ public class CLI {
             try {
                 System.out.println(question);
                 System.out.print("Input: ");
-                int userInt = scan.nextInt();
+                int userInt = scanner.nextInt();
 
                 if (userInt < min || userInt > max) {
                     System.out.println("\nInvalid, enter a number between " + min + " & " + max + "\n");
@@ -22,7 +22,7 @@ public class CLI {
                 }
             } catch (InputMismatchException exception) {
                 System.out.println("\nInvalid, you must enter a number between " + min + " & " + max + "\n");
-                scan.nextLine();
+                scanner.nextLine();
             }
         }
     }
@@ -31,7 +31,7 @@ public class CLI {
 
         while (true) {
             try {
-                int userInt = scan.nextInt();
+                int userInt = scanner.nextInt();
 
                 if (userInt < min || userInt > max) {
                     System.out.println("\nInvalid selection! Enter a number between " + min + " & " + max + "\n");
@@ -40,7 +40,7 @@ public class CLI {
                 }
             } catch (InputMismatchException exception) {
                 System.out.println("\nInvalid selection! Enter a number between " + min + " & " + max + "\n");
-                scan.nextLine();
+                scanner.nextLine();
             }
         }
     }
@@ -48,10 +48,9 @@ public class CLI {
     public static String getStr(String question) {
 
         while (true) {
-            System.out.println(question);
-            System.out.print("Input: ");
-            scan.nextLine();
-            String userInput = scan.nextLine().trim();
+            System.out.print(question + "\nInput: ");
+            scanner.nextLine();
+            String userInput = scanner.nextLine().trim();
 
             if (!userInput.equals("")) {
                 return userInput;
@@ -65,8 +64,8 @@ public class CLI {
 
         while (true) {
             System.out.print(question);
-            scan.nextLine();
-            char userChar = scan.next().toUpperCase().charAt(0);
+            scanner.nextLine();
+            char userChar = scanner.next().toUpperCase().charAt(0);
 
             if (userChar != ' ') {
                 return userChar;
@@ -80,7 +79,7 @@ public class CLI {
         System.out.println("\n*************************************\n");
         System.out.println("\tThank you, come again!");
         System.exit(0);
-        scan.close();
+        scanner.close();
     }
 
     public static int getInt(String question) {
@@ -88,17 +87,17 @@ public class CLI {
         while (true) {
             try {
                 System.out.print(question);
-                return scan.nextInt();
+                return scanner.nextInt();
 
             } catch (InputMismatchException exception) {
                 System.out.println("Sorry, you must enter a number");
-                scan.nextLine();
+                scanner.nextLine();
             }
         }
     }
 
     public static void pressEnter() {
-        scan.nextLine();
+        scanner.nextLine();
     }
 }
 

@@ -4,9 +4,9 @@ import java.util.Random;
 
 public class DiceRoller {
 
-    public static Random r = new Random();
-
     public static void run() {
+
+        Random r = new Random();
 
         int getRoll = CLI.getInt("\nEnter the amount of die/dice you would like to roll\nInput: ");
 
