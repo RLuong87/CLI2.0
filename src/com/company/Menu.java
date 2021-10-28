@@ -32,7 +32,8 @@ public class Menu {
                 11. Dice Roller
                 12. Encryption
                 13. Vowel Finder
-                14. Exit
+                14. Time Conversion
+                15. Exit
                 -------------------------------------
                 Selection:\s""");
     }
@@ -40,7 +41,7 @@ public class Menu {
     public static void options() {
         while (true) {
             displayMenu();
-            int option = CLI.getInt(0, 14);
+            int option = CLI.getInt(0, 15);
             switch (option) {
                 case 0 -> MarioStairs.run();
                 case 1 -> Factorial.run();
@@ -56,7 +57,8 @@ public class Menu {
                 case 11 -> DiceRoller.run();
                 case 12 -> Encryption.run();
                 case 13 -> VowelFinder.run();
-                case 14 -> CLI.exit();
+                case 14 -> CovertTime.run();
+                case 15 -> CLI.exit();
             }
         }
     }
